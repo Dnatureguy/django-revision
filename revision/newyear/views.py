@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
-import datetime #import the calener in order to be able to use it in this code. 
+import datetime #import the calender in order to be able to use it in this code. 
 
 
 # Create your views here.
 
-def index(request, newyear):
+def index(request):
     now = datetime.datetime.now()
     return render(request, "newyear/index.html", {
         "newyear": now.month == 1 and now.day == 1

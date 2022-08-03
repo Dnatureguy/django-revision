@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en">
     <head>
+        {% comment %} {% load static %} {% endcomment %}
         <title>Is It New Year's?</title>
+        {% comment %} <link href="static 'newyear/styles.css'" rel="stylesheet"> {% endcomment %}
     </head>
 
     <body>
 
-        {% if newyear %}
+         {% if newyear %}     {% comment %} "{%%}" is a syntax and is used to plug-in logic inside of a django template. 
+                                            In this case, conditions. {% endcomment %}
         <h1>YES</h1>
 
         {% else %}

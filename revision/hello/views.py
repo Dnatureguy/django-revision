@@ -17,7 +17,7 @@ def index(request):
 def david(request):
     return HttpResponse("Hi, david!")
 
-def greet(request, name): #remember a function can have more than two arguments, here "name" is trying to be  placeholder.
+def greet(request, name): #remember a function can have more than two arguments. Here, "name" is trying to be a placeholder.
     return HttpResponse(f"Hello, {name.capitalize()}") #now,"name" is added to represent any other string.
 
 def half(request, name):
