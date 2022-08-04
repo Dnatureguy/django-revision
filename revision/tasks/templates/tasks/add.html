@@ -1,0 +1,18 @@
+{%extends "tasks/layout.html"%}
+
+   
+   
+    {% block body %}
+
+   <h1>Add task</h1>
+   <form action="{% url 'tasks:add'%}" method="post">
+     {% csrf_token %} 
+     {% comment %} This token is used to secure the form wheneber it is posted. {% endcomment %}
+        {{form}}
+        <input type="submit">
+   </form>
+
+    <a href="{% url 'tasks:index' %}">View Task</a> 
+    {% comment %} The link is of name of the index route in the app "tasks".  {% endcomment %}
+
+    {% endblock %}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tasks</title>
+    </head>
+    {% comment %} The most powerful – and thus the most complex – part of Django’s template engine is template inheritance.
+     Template inheritance allows you to build a base “skeleton” template that contains all the common elements
+      of your site and defines blocks that child templates can override. 
+      {% endcomment %}
+
+<body>
+        {% block body%}
+
+        {% endblock%}
+
+        {% comment %} The block tag defines three blocks that child templates can fill in.
+         All the block tag does is to tell the template engine that a child template may override those portions of the template. {% endcomment %}
+
+
+</body>
+</html>

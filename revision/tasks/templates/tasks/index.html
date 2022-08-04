@@ -1,0 +1,26 @@
+
+{% extends "tasks/layout.html"%}
+
+{% comment %} 
+The extends tag is the key here. It tells the template engine that this template “extends” another template. 
+When the template system evaluates this template, first it locates the parent – in this case, “tasks/layout.html”. {% endcomment %}
+
+    {% block body%}
+
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}  {% comment %} loop over the elements in tasks sequence.  
+                                And list the element in this html template. {% endcomment %}                                    
+            <li>{{ task }}</li>  
+
+            {% empty %}
+            <li>No Tasks</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'tasks:add' %}">Add a new Task</a>
+
+    {% endblock %}
+
+
+
